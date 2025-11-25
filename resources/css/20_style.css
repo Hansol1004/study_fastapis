@@ -1,0 +1,37 @@
+body {
+    background-color: #1a1a1a;
+    color: #f8f9fa;
+}
+
+.navbar {
+    border-bottom: 1px solid #333;
+}
+
+.jumbotron {
+    background-color: #007bff;
+    color: white;
+}
+
+.card {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+}
+
+.card-title {
+    color: #ffffff;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    border-top: 1px solid #333;
+}

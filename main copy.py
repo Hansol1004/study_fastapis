@@ -8,12 +8,6 @@ from fastapi import Request
 
 Templates = Jinja2Templates(directory="templates/")
 
-@app.get("/")
-async def root(request: Request):
-    return Templates.TemplateResponse("20_vibecodings_concepts.html",
-                                       {"request": request})
-
-
 @app.get("/maim.html")
 async def main_html(request: Request):
 
@@ -55,7 +49,8 @@ async def user_list(request: Request):
 
 from fastapi.staticfiles import StaticFiles
 
-app.mount("/resources", StaticFiles(directory="resources"), name="resources")
+app.mount("/images", StaticFiles(directory="resources/images"))
+app.mount("/css", StaticFiles(directory="resources/css"))
 app.mount("/quests", StaticFiles(directory="quests"), name="quests")
 
 pass
